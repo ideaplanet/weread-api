@@ -1,0 +1,38 @@
+{
+  "name": "weread-api",
+  "version": "1.0.0",
+  "description": "微信读书 Agent API Gateway 的 TypeScript SDK，完整实现官方 Skill（Tencent/WeChatReading v1.0.5）定义的全部 17 个接口",
+  "type": "module",
+  "main": "dist/weread.js",
+  "types": "dist/weread.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/weread.d.ts",
+      "default": "./dist/weread.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run build && node --test dist/weread.test.js",
+    "example": "npm run build && node dist/weread.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "weread",
+    "微信读书",
+    "api",
+    "agent",
+    "skill"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  }
+}
